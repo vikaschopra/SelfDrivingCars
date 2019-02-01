@@ -1,11 +1,22 @@
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,800');
+@import url('https://fonts.googleapis.com/css?family=Segoe+UI:400,600,800');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}html,body{height:100vh;}body{display:flex;align-items:center;justify-content:center;padding:40px;font:14px/1.5 'Open Sans',sans-serif;color:#345;background:#f0f2f4;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}html,body{height:100vh;}body{display:flex;align-items:center;justify-content:center;padding:40px;font:20px/1.5 'Segoe UI',Segoe-UI;color:#345;background:#f0f2f4;}
 
 p:not(:last-child) {
   margin: 0 0 20px;
+  text-align: left;
+}
+
+h1 {
+    font-size: 36px;
+	text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+	text-align: center;
 }
 
 main {
@@ -14,12 +25,15 @@ main {
   border: 1px solid rgba(0,0,0,.2);
   background: #fff;
   box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  background-color: gainsboro;
 }
 
 section {
   display: none;
-  padding: 20px 0 0;
+  padding: 20px 20px 20px;
   border-top: 1px solid #abc;
+  background-color: gainsboro;
+  line-height: 1.5;
 }
 
 input {
@@ -34,6 +48,8 @@ label {
   text-align: center;
   color: #abc;
   border: 1px solid transparent;
+  border-bottom: 1px solid #0af;
+  background-color: white;
 }
 
 label:before {
@@ -56,7 +72,8 @@ input:checked + label {
   color: #0af;
   border: 1px solid #abc;
   border-top: 2px solid #0af;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid gainsboro;
+  background-color: #e0dbeb;
 }
 
 #tab1:checked ~ #content1,
@@ -72,8 +89,25 @@ input:checked + label {
   }
   label:before {
     margin: 0;
-    font-size: 18px;
+    font-size: 24px;
   }
+  figure.left,
+  figure.right {
+    float: none;
+    width: 100%;
+    img {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+    }
+    figcaption {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+  
+  
+  
 }
 
 @media screen and (max-width: 500px) {
@@ -81,3 +115,47 @@ input:checked + label {
     padding: 15px;
   }
 }
+
+figure {
+  display: table;
+}
+
+img {
+  display: block;
+	width:30%;
+	height:30%;
+}
+
+figure.left {
+  float: left;
+  img { 
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  figcaption {
+    margin-right: 1.5rem;
+  }
+}
+
+figure.right {
+  float: right;
+  img {
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  figcaption {   
+    margin-left: 1.5rem;
+  }
+}
+
+figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+
+strong {
+  font-weight: bold;
+}
+
